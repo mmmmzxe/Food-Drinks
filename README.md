@@ -9,8 +9,8 @@
 
 
 
-# React Portfolio 2
-### Vite + React + tailwind
+# React Food&Drink
+###  React + Sass
 
 ```bash 
 npm i
@@ -21,13 +21,17 @@ npm start
 
 
 ## live preview link
-[See Now]()
+[See Now](https://foodrink.netlify.app/)
 
 ## Startup repository link
-[Repository]()
+[Repository](https://github.com/mmmmzxe/Food-Drinks/)
 
 
 ## packages:
 + [Scss]
++ [axios]
++ [framer-motion]
++ [react-router]
++ [slick-carousel]
 
 
