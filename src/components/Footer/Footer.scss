@@ -1,0 +1,72 @@
+@import "../../App.scss";
+
+.footer{
+background: $clr-orange;
+color: white !important;
+padding: 20px;
+display: flex;
+flex-direction: column;
+
+.footer-1{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    @media screen and (max-width: 768px) {
+        width: 100%;
+     
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        
+        }
+    
+    div{
+        .navbar-b {
+            img{
+                width: 45%;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            @media screen and (max-width: 768px) {
+                width: 100%;
+             display: flex;
+             align-items: center;
+                justify-content: center;
+                
+                }
+        }
+        img{
+            width: 45%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ 
+    p{
+      margin-top: 10px; 
+      color: white !important; 
+    }
+    }
+    
+}
+.footer-2{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+     
+        justify-content: center;
+        
+        }
+    p{
+        color: white !important;
+    }
+}
+hr{
+    border: 1px solid #fff !important;
+  }
+}

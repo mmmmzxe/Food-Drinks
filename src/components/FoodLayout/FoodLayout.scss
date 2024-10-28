@@ -1,0 +1,136 @@
+.food-layout {
+    margin: 10px;
+  
+    .all-items {
+      display: grid;
+      gap: 50px;
+      grid-template-rows: repeat(3, auto);
+  
+      .all-item,
+      .all-item-2,
+      .all-item-3 {
+        display: grid;
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+        position: relative;
+      }
+  
+      .all-item {
+        grid-template-columns: 2fr 1fr;
+  
+        .text {
+          position: relative;
+          bottom: -70px;
+  
+          .text-p {
+            margin-top: 17px;
+          }
+        }
+  
+        .image {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+  
+          img {
+            position: relative;
+            bottom: -70px;
+            width: 50%;
+            height: auto;
+            z-index: 11;
+          }
+        }
+      }
+  
+      .all-item-2 {
+        grid-template-columns: 3fr 1fr;
+        justify-content: center;
+        align-items: center;
+  
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          img {
+            width: 70%;
+            height: auto;
+            z-index: 0;
+          }
+        }
+      }
+  
+      .all-item-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .text {
+          width: 35%;
+          margin: 50px;
+  
+          .text-p {
+            margin-bottom: 25px;
+          }
+        }
+  
+        .item-4 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+  
+      // Responsive adjustments
+      @media (max-width: 768px) {
+     
+      .all-item{
+        display: flex;
+flex-wrap: wrap-reverse;
+gap: 20px;
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+           
+              width: 100%;
+              height: auto;
+            
+            }
+          }
+      }
+ 
+        .all-item-2 {
+           display: flex;
+           margin-top: 20px;
+         flex-wrap: wrap-reverse;
+         .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+           
+              width: 100%;
+              height: auto;
+            
+            }
+          }
+        }
+  
+       .all-item-3{
+      
+        .text{
+            width: 100%;
+        }
+       }
+  
+     
+      }
+    }
+  }
+  

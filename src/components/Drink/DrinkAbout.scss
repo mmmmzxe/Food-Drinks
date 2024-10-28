@@ -1,0 +1,48 @@
+.section-About{
+    margin: auto;
+    overflow-x: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+align-items: center;  height: auto;
+ 
+    .section-About-Images{
+    display: grid;
+    margin: auto;
+       @media screen and (max-width: 768px) {
+      width:90%;
+      }
+    width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.s2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    height: 50vh;
+  p{
+    font-weight: bold !important;
+    color: black !important;
+    font-family:'Franklin Gothic ' !important;
+  }
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      }
+}
+}

@@ -1,0 +1,140 @@
+@import "../../App.scss";
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  width: 80%;
+  background: url("../../assets/images/Orange.png") right top no-repeat;
+  background-size: auto;
+
+  @media screen and (max-width: 768px) {
+    background: none;
+  }
+
+  .app-container-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-gallery {
+      width: 45%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      .table-image {
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+
+    .contact-info {
+      width: 50%;
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: start;
+      z-index: 2;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        font-size: 16px !important;
+        font-weight: bold;
+      }
+
+      a {
+        color: #87a34d;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .location {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+
+    .location-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 10px;
+
+      p {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .maps-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 15px !important;
+        color: $clr-orange;
+        border: 1px solid $clr-orange;
+        border-radius: 5px;
+        text-decoration: none;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: $clr-orange;
+          color: #fff;
+        }
+      }
+    }
+
+    .location-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      .restaurant-image {
+        width: 60%;
+        height: auto;
+        border-radius: 8px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Indie+Flower&display=swap');
+
+// Variables
+$clr-black: #000;
+$clr-orange: #233000;
+$clr-dark-orange: #ff7a00;
+$clr-green: #ff7a00;
+$clr-gray: #ffff;
+$clr-dark-gray: #ff7a00;
+$clr-dark: #DFF3E3;
+$clr-whitesmoke: #EEEDEB;
+$transition: all 300ms ease-in-out;
+$font-raleway: 'SF Pro Display', sans-serif;
+
+// Font Imports
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./assets/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Global Styles & Resets
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+html{
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: $clr-black;
+  overflow-x: hidden;
+}
+main{
+  background: none!important;
+}
+p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: 'SF Pro Display' !important;
+  color: #0000009c !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif !important;
+  font-weight: 900;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  width: 90%;
+  height: auto;
+}
+
+.img-cover {
+  width: 70%;
+  object-fit: cover;
+
+  @media (max-width: 1013px) {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+// Button Styling
+button {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: $clr-whitesmoke;
+}
+
+// Input and Textarea Styling
+input, textarea {
+  outline: 0;
+  border: none;
+  resize: none;
+  font-size: 1.6rem;
+}
+
+hr {
+  border: none;
+  border-top: 2.5px dotted #0000008f;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// Utility Classes
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Flexbox and Grid Utilities
+.flex {
+  display: flex;
+
+  &-column { flex-direction: column; }
+  &-wrap { flex-wrap: wrap; }
+}
+
+.align {
+  &-center { align-items: center; }
+  &-start { align-items: flex-start; }
+  &-end { align-items: flex-end; }
+  &-stretch { align-items: stretch; }
+}
+
+.justify {
+  &-center { justify-content: center; }
+  &-between { justify-content: space-between; }
+  &-start { justify-content: flex-start; }
+  &-end { justify-content: flex-end; }
+}
+
+.grid { display: grid; }
+
+// Height and Width
+.h-100 { height: 100%; }
+.w-100 { width: 100%; }
+
+// Text Utilities
+.text {
+  &-center { text-align: center; }
+  &-start { text-align: left; }
+  &-end { text-align: right; }
+  &-justify { text-align: justify; }
+  &-uppercase { text-transform: uppercase; }
+  &-capitalize { text-transform: capitalize; }
+  &-black { color: $clr-black; }
+  &-orange { color: $clr-orange; }
+  &-green { color: $clr-green; }
+  &-gray { color: $clr-gray; }
+  &-dark-o { color: $clr-dark-orange; }
+  &-dark { color: $clr-dark; }
+  &-whitesmoke { color: $clr-whitesmoke; }
+}
+
+// Background Colors
+.bg {
+  &-black { background-color: $clr-black; }
+  &-orange { background-color: #070707f5; }
+  &-green { background-color: $clr-green; }
+  &-gray { background-color: $clr-gray; }
+  &-dark-o { background-color: $clr-dark-orange; }
+  &-dark { background-color: $clr-dark; }
+  &-whitesmoke { background-color: $clr-whitesmoke; }
+}
+
+// Font Weights
+.fw {
+  &-1 { font-weight: 100; }
+  &-2 { font-weight: 200; }
+  &-3 { font-weight: 300; }
+  &-4 { font-weight: 400; }
+  &-5 { font-weight: 500; }
+  &-6 { font-weight: 600; }
+  &-7 { font-weight: 700; }
+  &-8 { font-weight: 800; }
+  &-9 { font-weight: 900; }
+}
+
+// Font Sizes
+@each $i in (11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26) {
+  .fs-#{$i} { font-size: #{$i}px; }
+}
+
+// Letter Spacing
+.ls-1 { letter-spacing: 1px; }
+.ls-2 { letter-spacing: 2px; }
+
+// Margin and Padding
+@mixin space-classes($size, $property) {
+  .#{$property}-#{$size} {
+    #{$property}-top: #{$size}px;
+    #{$property}-bottom: #{$size}px;
+  }
+  .#{$property}x-#{$size} {
+    #{$property}-left: #{$size}px;
+    #{$property}-right: #{$size}px;
+  }
+}
+
+@include space-classes(1, m);
+@include space-classes(2, m);
+@include space-classes(3, m);
+@include space-classes(4, m);
+@include space-classes(5, m);
+@include space-classes(6, m);
+
+@include space-classes(1, p);
+@include space-classes(2, p);
+@include space-classes(3, p);
+@include space-classes(4, p);
+@include space-classes(5, p);
+@include space-classes(6, p);
+
+// Section Styling
+.main-holder {
+  overflow-x: hidden;
+}
+
+.section-wrapper {
+  padding: 20px 0;
+}
+
+.sc-title {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 24px;
+  padding: 20px;
+  height: auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    height: 4px;
+    width: 80px;
+    background-color: $clr-dark-orange;
+  }
+}
+
+// Opacity Utilities
+@for $i from 1 through 9 {
+  .op-0#{$i} { opacity: #{0 + $i / 10}; }
+}
+
+// Breadcrumb Styling
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 2rem;
+  color: $clr-black;
+  
+  li {
+    transition: $transition;
+    &:hover { opacity: 0.9; }
+  }
+
+  .breadcrumb-i { display: flex; flex-wrap: wrap; }
+}
+
+// Responsive Headings
+@media screen and (max-width: 768px) {
+  h1, h2, h4, h5, h6 { font-size: 25px !important; }
+  h3 { font-size: 15px !important; }
+}

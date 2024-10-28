@@ -1,0 +1,93 @@
+@import '../../App.scss';
+// Add this in your main SCSS/CSS file
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+.chiefs-section {
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    text-align: center; // Center the title
+   
+    .slider-wrapper {
+        max-width: 90%;
+      height: auto;
+        margin: auto;
+    }
+
+    .slick-slide {
+        height: auto;
+        // Optional: Adjust slide styling, e.g.:
+        padding: 10px; // Add padding around slides
+    }
+
+    .title {
+        margin-bottom: 20px; // Add margin to the title
+    }
+}
+
+.top-chiefs-container{
+    display: flex;
+    width: 90%;
+justify-content: center;
+align-items: center;
+ flex-direction: row;
+ margin-left:50px ;
+}
+.chief-card{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+  .imag{
+    height: 250px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    img{
+
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        box-shadow: 0 3px 6px var(--shadow-color);
+    }
+  }
+  
+    .chief-card-info{
+        width: 50%;
+      
+  
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+      flex-direction: column;
+        .chief-card-name{
+            font-size: .8em;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .chief-recipe-count, .chief-cuisine{
+            font-size: .7em;
+            color: var(--text-light);
+        }
+        .cheif-icons{
+            font-size: .6em;
+            svg{
+                margin-right: .5em;
+                &:nth-child(1){
+                    color: #0063f7;
+                }
+                &:nth-child(2){
+                    color: #13b4ff;
+                }
+                &:nth-child(3){
+                    color: #ff0056;
+                }
+            }
+        }
+    }
+}
+.slick-arrow {
+display: none;
+}

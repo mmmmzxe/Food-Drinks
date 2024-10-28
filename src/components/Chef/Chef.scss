@@ -1,0 +1,95 @@
+.excellent-cook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #EBF0E4; // Light greenish background
+height: auto;
+  .image-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+    .chef-image {
+      width: 80%; // Adjust width to fit proportionally
+      height: auto;
+      z-index: 2;
+    }
+
+  }
+
+  .text-section {
+    max-width: 40%; // Adjust text section width
+    position: relative;
+    z-index: 2;
+    .salmon-image {
+      position: relative;
+      width: 16rem; // Adjust size of the salmon image
+      height: auto;
+      right: 0;
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-family: 'Cinzel', serif;
+      color: #2b2b2b;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #4d4d4d;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .excellent-cook-container {
+    flex-direction: column;
+    text-align: center;
+
+    .image-section {
+      margin-bottom: 2rem;
+
+      .salmon-image {
+        position: relative;
+        bottom: 0rem;
+        left: 0rem;
+    
+        width: 80%; // Adjust the salmon image size for smaller screens
+        max-width: 16rem; // Ensure it doesn't exceed this size
+      }
+    }
+
+    .text-section {
+      max-width: 100%; // Full width on smaller screens
+
+      h1 {
+        font-size: 2rem; // Smaller heading on mobile
+      }
+
+      p {
+        font-size: 0.875rem; // Slightly smaller paragraph text
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .excellent-cook-container {
+    .text-section {
+      h1 {
+        font-size: 1.5rem; // Further decrease heading size for very small screens
+      }
+
+      p {
+        font-size: 0.8rem; // Further decrease paragraph size
+      }
+    }
+  }
+}

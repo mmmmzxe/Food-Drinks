@@ -1,0 +1,54 @@
+@import "../../App.scss";
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    flex-wrap: wrap; // Allow items to wrap onto the next line on smaller screens
+
+    .features-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        width: 80%; // Take full width on smaller screens
+        max-width: 300px; // Set a max-width for better layout control
+
+        .features-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80%; // Adjusted for better responsiveness
+                height: auto; // Maintain aspect ratio
+            }
+        }
+
+        .features-text {
+            width: 100%;
+            margin: 15px;
+          
+            text-align: center;
+            
+
+            // Optional: Add a transition for hover effects
+         
+        }
+    }
+}
+
+// Media query for responsiveness
+@media only screen and (max-width: 768px) {
+    .features {
+        flex-direction: column; // Stack features vertically on smaller screens
+
+        .features-1 {
+            max-width: 90%; // Allow for more width on small screens
+            margin: 10px 0; // Reduce margin for better spacing
+        }
+    }
+}

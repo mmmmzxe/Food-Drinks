@@ -1,0 +1,51 @@
+.section-container {
+    position: relative;
+    background: url('../../assets/images/bg2.png') no-repeat center;
+    background-size: cover;
+  height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    margin-top: 10px;
+    
+    /* Add shadow overlay */
+ 
+  
+    .content-s {
+      position: relative;
+    background: url('../../assets/images/”.png') no-repeat top right;
+ background-size: contain;
+  height: 50%;
+      color: white;
+  width: 50%;
+      p {
+        font-size: 1.5rem;
+        font-style: italic;
+        letter-spacing: 0.2rem;
+        margin-bottom: 20px;
+        color: #fff !important;
+        font-family:cursive, !important;
+      }
+  
+    
+  
+
+     
+    }
+  }
+  @media (max-width: 759px) {
+    .section-container{
+      padding: 10px;
+    }
+    .content-s{
+      width: 100%;
+      background: none;
+      height: 100%;
+    }
+    p{
+      width: 100%;
+      font-size: 15px !important;
+    }
+    }

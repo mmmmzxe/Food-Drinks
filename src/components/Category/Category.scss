@@ -1,0 +1,117 @@
+@import "../../App.scss";
+
+.all {
+ 
+ 
+    padding: 25px;
+    background: url('../../assets/images/Image.png') no-repeat right top;
+    width: 100%;
+margin: 0;
+margin-bottom: 50px;
+ 
+}
+
+.ca {
+    display: flex;
+flex-wrap: wrap;
+ 
+    .ca-l {
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        font-weight: bold;
+        letter-spacing: 4px;
+        font-size: 24px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            margin-right: 20px;
+        }
+    }
+
+    &:hover .ca-l {
+        margin-left: 20px;
+        transition: 0.5s linear;
+        color: $clr-dark-orange !important;
+    }
+
+    @media screen and (min-width: 576px) {
+        flex-direction: row; // Align items horizontally on larger screens
+      
+    }
+}
+.category {
+    display: grid;
+
+
+    @media screen and (min-width: 420px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px; // Adjust the gap for tablet
+    }
+
+    @media screen and (min-width: 576px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: 1080px) {
+        grid-template-columns: repeat(8, 1fr);
+        
+    }
+
+    .category-itm {
+        
+        position: relative;
+        margin: 12px 10px;
+        width: 80%; // Consider using a fluid width
+        border-radius: 25px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        &-img {
+        
+          
+
+            img {
+                padding: 12px;
+                transition: $transition;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(0.8);
+                }
+            }
+        }
+
+        &-title {
+            margin: 10px;
+            padding: 1px 8px;
+            border-radius: 3px;
+            transition: $transition;
+            text-align: center;
+        }
+
+        &:hover {
+            .category-itm-title {
+             
+                border-radius: 2px;
+            }
+        }
+    }
+}
+.dirnk{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  
+}
